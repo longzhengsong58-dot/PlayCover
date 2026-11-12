@@ -15,6 +15,7 @@ struct AppSettingsData: Codable {
 
     var disableTimeout = false
     var displayRotation = 0
+    var resizeWindowOnLaunch = false
     var iosDeviceModel = "iPad13,8"
     var windowWidth = 1920
     var windowHeight = 1080
@@ -63,6 +64,7 @@ struct AppSettingsData: Codable {
         sensitivity = try container.decodeIfPresent(Float.self, forKey: .sensitivity) ?? 50
         disableTimeout = try container.decodeIfPresent(Bool.self, forKey: .disableTimeout) ?? false
         displayRotation = try container.decodeIfPresent(Int.self, forKey: .displayRotation) ?? 0
+        resizeWindowOnLaunch = try container.decodeIfPresent(Bool.self, forKey: .resizeWindowOnLaunch) ?? false
         iosDeviceModel = try container.decodeIfPresent(String.self, forKey: .iosDeviceModel) ?? "iPad13,8"
         windowWidth = try container.decodeIfPresent(Int.self, forKey: .windowWidth) ?? 1920
         windowHeight = try container.decodeIfPresent(Int.self, forKey: .windowHeight) ?? 1080
@@ -95,6 +97,21 @@ struct AppSettingsData: Codable {
         blockSleepSpamming = try container.decodeIfPresent(Bool.self, forKey: .blockSleepSpamming) ?? false
         ignoreUnityKeyboardInitializationError = try container.decodeIfPresent(
             Bool.self, forKey: .ignoreUnityKeyboardInitializationError) ?? false
+    }
+
+    mutating func applyPVZ2LandscapeCompatibility() {
+        // Use window-backed UIScreen bounds instead of private scene geometry
+        // overrides, and start in landscape before the game builds its renderer.
+        resolution = 6
+        resizableAspectRatioType = 3
+        resizableAspectRatioWidth = 16
+        resizableAspectRatioHeight = 9
+        windowWidth = 1920
+        windowHeight = 1080
+        displayRotation = 0
+        inverseScreenValues = false
+        windowFixMethod = 0
+        resizeWindowOnLaunch = true
     }
 }
 

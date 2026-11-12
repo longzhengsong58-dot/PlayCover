@@ -217,6 +217,16 @@ struct GraphicsView: View {
     var body: some View {
         ScrollView {
             VStack {
+                if settings.settings.bundleIdentifier == "com.popcap.ios.chs.PVZ2" {
+                    VStack(alignment: .leading) {
+                        Button("settings.compatibility.pvz2.apply") {
+                            settings.settings.applyPVZ2LandscapeCompatibility()
+                        }
+                        Text("settings.compatibility.pvz2.help")
+                            .font(.caption)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                }
                 HStack {
                     Text("settings.picker.iosDevice")
                     Spacer()
@@ -359,6 +369,11 @@ struct GraphicsView: View {
                     }
                 }
                 VStack(alignment: .leading) {
+                    if settings.settings.resolution == 6 {
+                        Toggle("settings.compatibility.resizeWindowOnLaunch",
+                               isOn: $settings.settings.resizeWindowOnLaunch)
+                            .help("settings.compatibility.resizeWindowOnLaunch.help")
+                    }
                     if #available(macOS 13.2, *) {
                         HStack {
                             Toggle("settings.picker.windowFix", isOn: $settings.settings.inverseScreenValues)

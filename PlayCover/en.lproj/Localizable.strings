@@ -346,3 +346,9 @@
 "alert.version.title" = "New Version Available";
 "alert.version.text" = "A new version for %@ is available. Do you want to download it?";
 
+
+// Legacy landscape compatibility
+"settings.compatibility.pvz2.apply" = "Apply PVZ2 landscape compatibility";
+"settings.compatibility.pvz2.help" = "Use a landscape launch window and window-backed screen bounds. Restart the game after applying.";
+"settings.compatibility.resizeWindowOnLaunch" = "Set window size at launch";
+"settings.compatibility.resizeWindowOnLaunch.help" = "Start resizable apps at the configured resolution, scaled to fit the display. Requires matching PlayTools.";

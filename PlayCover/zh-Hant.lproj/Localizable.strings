@@ -366,3 +366,9 @@
 "macos.version" = "This app can be installed from Mac App Store";
 "ipaLibrary.AlphabeticalSort" = "Sort source apps alphabetically";
 "alert.install.anyway" = "Install Anyway";
+
+// Legacy landscape compatibility
+"settings.compatibility.pvz2.apply" = "套用植物大戰殭屍2橫向相容設定";
+"settings.compatibility.pvz2.help" = "使用橫向啟動視窗，並讓螢幕尺寸跟隨視窗。套用後請重新啟動遊戲。";
+"settings.compatibility.resizeWindowOnLaunch" = "啟動時設定視窗尺寸";
+"settings.compatibility.resizeWindowOnLaunch.help" = "以設定的解析度啟動可調整大小的視窗，並縮小至螢幕可容納的尺寸。需要配套的 PlayTools。";
