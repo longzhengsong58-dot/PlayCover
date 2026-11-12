@@ -349,6 +349,6 @@
 
 // Legacy landscape compatibility
 "settings.compatibility.pvz2.apply" = "Apply PVZ2 landscape compatibility";
-"settings.compatibility.pvz2.help" = "Use a landscape launch window and window-backed screen bounds. Restart the game after applying.";
+"settings.compatibility.pvz2.help" = "Start in the largest supported 16:10 window. Fullscreen and window zoom are not recommended. Restart the game after applying.";
 "settings.compatibility.resizeWindowOnLaunch" = "Set window size at launch";
 "settings.compatibility.resizeWindowOnLaunch.help" = "Start resizable apps at the configured resolution, scaled to fit the display. Requires matching PlayTools.";

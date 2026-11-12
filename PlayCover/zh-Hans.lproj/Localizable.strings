@@ -389,6 +389,6 @@
 
 // Legacy landscape compatibility
 "settings.compatibility.pvz2.apply" = "应用植物大战僵尸2横屏兼容配置";
-"settings.compatibility.pvz2.help" = "使用横屏启动窗口，并让屏幕尺寸跟随窗口。应用后请重启游戏。";
+"settings.compatibility.pvz2.help" = "以游戏支持的最大 16:10 窗口启动。不建议全屏或最大化窗口。应用后请重启游戏。";
 "settings.compatibility.resizeWindowOnLaunch" = "启动时设置窗口尺寸";
 "settings.compatibility.resizeWindowOnLaunch.help" = "以配置的分辨率启动可调整大小的窗口，并缩小至屏幕可容纳的尺寸。需要配套的 PlayTools。";

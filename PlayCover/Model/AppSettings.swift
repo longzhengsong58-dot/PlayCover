@@ -103,11 +103,11 @@ struct AppSettingsData: Codable {
         // Use window-backed UIScreen bounds instead of private scene geometry
         // overrides, and start in landscape before the game builds its renderer.
         resolution = 6
-        resizableAspectRatioType = 3
+        resizableAspectRatioType = 4
         resizableAspectRatioWidth = 16
-        resizableAspectRatioHeight = 9
+        resizableAspectRatioHeight = 10
         windowWidth = 1920
-        windowHeight = 1080
+        windowHeight = 1200
         displayRotation = 0
         inverseScreenValues = false
         windowFixMethod = 0
